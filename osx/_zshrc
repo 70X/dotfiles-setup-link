@@ -1,0 +1,15 @@
+
+export ZSH="/Users/soniavolpe/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+alias DEV="cd $HOME/Development/"
+
+alias H="history | grep"
+alias G="| grep"
+
+alias gitsoftreset="git reset --soft HEAD~1"
