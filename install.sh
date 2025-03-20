@@ -34,7 +34,7 @@ git pull
 
 if [ $OS == "Darwin" ]
 then
-	folder="osx"
+	folder="./osx/dotfiles"
 	install_homebrew
 else
 	echo "OS no supported: $OS"
@@ -45,12 +45,12 @@ cd $folder
 
 for item in $(ls)
 do
-    new_item=$(echo $item | sed s/^_/./)
-    echo $item -> $new_item
-    if [ -d $item ]
-    then
-        cp -r $item ~/$new_item-copy
-    else
-        cp $item ~/$new_item-copy
-    fi
+  new_item=$(echo $item | sed s/^_/./)
+	echo "$item -> $new_item"
+	if [ -d $item ]
+	then
+			cp -r $item ~/$new_item
+	else
+			cp $item ~/$new_item
+	fi
 done
