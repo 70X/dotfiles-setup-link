@@ -32,6 +32,21 @@ fi
 cd $REPO_DIRECTORY
 git pull
 
+
+function create_and_overwrite_dotfiles {
+	for item in $(ls)
+	do
+		new_item=$(echo $item | sed s/^_/./)
+		echo "$item -> $new_item"
+		if [ -d $item ]
+		then
+				cp -r $item ~/$new_item
+		else
+				cp $item ~/$new_item
+		fi
+	done
+}
+
 if [ $OS == "Darwin" ]
 then
 	folder="./osx/dotfiles"
@@ -42,15 +57,4 @@ else
 fi
 
 cd $folder
-
-for item in $(ls)
-do
-  new_item=$(echo $item | sed s/^_/./)
-	echo "$item -> $new_item"
-	if [ -d $item ]
-	then
-			cp -r $item ~/$new_item
-	else
-			cp $item ~/$new_item
-	fi
-done
+create_and_overwrite_dotfiles
