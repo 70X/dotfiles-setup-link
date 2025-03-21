@@ -2,7 +2,8 @@
 
 ## Useful links
 
-- [effective go](https://go.dev/doc/effective_go): best practices to follow
+- [effective go](https://go.dev/doc/effective_go)
+- [go by example](https://gobyexample.com/)
 
 ## Create a new empty project
 
