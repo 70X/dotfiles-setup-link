@@ -1,4 +1,3 @@
-OS=Sequoia #Darwin
 REPO_DIRECTORY=~/.dotfiles
 
 function install_homebrew {
@@ -42,13 +41,7 @@ function create_and_overwrite_dotfiles {
 	done
 }
 
-if [ $OS == "Sequoia" ]; then
-	folder="./osx/dotfiles"
-	install_homebrew
-else
-	echo "OS no supported: $OS"
-	exit 1
-fi
+install_homebrew
 
-cd $folder
+cd "./osx/dotfiles"
 create_and_overwrite_dotfiles
