@@ -42,7 +42,7 @@ function create_and_overwrite_dotfiles {
 	done
 }
 
-if [ $OS == "Darwin" ]; then
+if [ $OS == "Sequoia" ]; then
 	folder="./osx/dotfiles"
 	install_homebrew
 else
