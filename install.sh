@@ -6,7 +6,6 @@ function install_homebrew {
 
 	for package in $(cat ./osx/packages.txt); do
 		brew install $package
-		break
 	done
 }
 
