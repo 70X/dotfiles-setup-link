@@ -8,12 +8,14 @@ gimp
 git
 git-delta
 go@1.23.5
+google-chrome
 inkscape
 node
 nvm
 pika
 rectangle
 tailscale
+visual-studio-code
 wget
 xz
 zlib
