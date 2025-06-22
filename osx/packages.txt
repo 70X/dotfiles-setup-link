@@ -15,6 +15,7 @@ nvm
 pika
 rectangle
 tailscale
+tree
 visual-studio-code
 wget
 xz
